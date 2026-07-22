@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",         /* Modern JS features use karne ke liye */
+    "module": "commonjs",       /* Playwright nodes ke sath compatible module system */
+    "moduleResolution": "node", /* Node.js style module resolution */
+    "types": ["node"],
+    
+    // Paths definition short imports ke liye
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["src/pages/*"],
+      "@fixtures/*": ["src/fixtures/*"]
+    },
+
+    "ignoreDeprecations": "6.0",
+    // Outputs & Debugging
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Strict Checks (Quality maintain rakhne ke liye)
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*", "tests/**/*", "playwright.config.ts"]
+}
